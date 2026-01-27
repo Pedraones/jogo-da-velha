@@ -1,29 +1,75 @@
 #include <stdio.h>
-#include "operations.c"
 
-//n1 quem e multiplicado
-//n2 quem multiplica
-void chamada(int n1, int n2){
-    printf("multi(%d, %d) \n", n1, n2);
+void conta(int value, int cont){
+    int cedulas[5] = {1, 5, 10, 50, 100};
+    static int qtd1;
+    static int qtd5;
+    static int qtd10;
+    static int qtd50;
+    static int qtd100;
+    int resto;
+
+    if(value){
+        switch (cedulas[cont])
+        {
+            case 1:
+                printf("case = 1");
+                resto = value%cedulas[cont];
+                qtd1 = value / cedulas[cont];
+                
+                printf("\n%d\n", qtd1);
+
+                return conta(resto, cont -1);
+                
+            case 5:
+                printf("case = 5");
+                resto = value%cedulas[cont];
+                qtd5 = value / cedulas[cont];
+                
+                printf("\n%d\n", qtd5);
+
+                return conta(resto, cont -1);
+
+            case 10:
+                printf("case = 10");
+                resto = value%cedulas[cont];
+                qtd10 = value / cedulas[cont];
+
+                printf("\n%d\n", qtd10);
+                
+                return conta(resto, cont -1);
+
+            case 50:
+                printf("case = 50");
+                resto = value%cedulas[cont];
+                qtd50 = value / cedulas[cont];
+
+                printf("\n%d\n", qtd50);
+                
+                return conta(resto, cont -1);
+
+            case 100:
+                printf("case = 100");
+                resto = value%cedulas[cont];
+                qtd100 = value / cedulas[cont] > 0 ? value / cedulas[cont] : 0;
+                
+                printf("\n%d\n", qtd100);
+
+                return conta(resto, cont -1);
+        }
+    } 
+
+    if(value == 0) printf("1: %d, 5: %d, 10: %d, 50: %d, 100: %d", qtd1, qtd5, qtd10, qtd50, qtd100);
 }
 
-void devolve(int r){
-    printf("%d \n", r);
+int interacao(){
+    int entrada;
+    printf("Digite o valor para receber as cedulas \n");
+    scanf("%d", &entrada);
+    return entrada;
 }
 
-int multi(unsigned int n1, unsigned int n2) {
-    int r;
-    chamada(n1, n2);
-    if( n2== 0 ) {
-        return 0;
-    }
-    else {
-        r = n1 + multi(n1, n2-1);
-        devolve(r);
-    }
-    return r;
+int main(void) {
+    int entrada = interacao();
+    if(entrada) conta(entrada, 4);
 } 
-
-int main(){
-    printf("resultado: %d",multi(5, 4));
-}
