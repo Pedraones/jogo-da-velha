@@ -1,15 +1,19 @@
 #include <stdio.h>
 
-int posicao(int x, int L[], int width){
-    for(int i = 0; i < width; i++){
-        if(x == L[i]) return i;
+//x => valor a ser procurado
+//width => tamanho do vetor
+
+void posicao(int x, int L[], int width){
+    L[width-1] = x;
+    int i = 0;
+    while(L[i] != x){
+        i++;
     }
-    return -1;
+    if(L[i] == x && i < width-1) printf("X pertence ao vetor \n");
+    else printf("X nao pertence ao vetor \n");
 }
 
 int main(void) {
-    int L[2] = {1,3};
-    int verifica = posicao(1, L, 2);
-    printf("%d \n", verifica);
-    printf("%d \n", L[verifica]);
+    int L[3] = {5,1};
+    posicao(5, L, 3);
 } 
