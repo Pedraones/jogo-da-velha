@@ -3,17 +3,21 @@
 //x => valor a ser procurado
 //width => tamanho do vetor
 
-void posicao(int x, int L[], int width){
-    L[width-1] = x;
-    int i = 0;
-    while(L[i] != x){
-        i++;
+void BuscaBinaria(int x, int L[], int width){
+    int IInicial = 0;
+    int IUltimo = width-1;
+    
+    
+    while(IInicial <= IUltimo){
+        int Meio = (IInicial + IUltimo) / 2;
+        if(x == L[Meio]) return printf("X foi encontrado \n");
+        if(x < L[Meio]) IUltimo = Meio-1;
+        else IInicial = Meio + 1;
     }
-    if(L[i] == x && i < width-1) printf("X pertence ao vetor \n");
-    else printf("X nao pertence ao vetor \n");
+    return printf("X nao foi encontrado \n");
 }
 
 int main(void) {
-    int L[3] = {5,1};
-    posicao(5, L, 3);
+    int L[] = {10, 16, 27, 31, 33, 37, 41, 49, 53, 57, 68, 69, 72, 77, 84, 89, 95, 99};
+    BuscaBinaria(99, L, 18);
 } 
