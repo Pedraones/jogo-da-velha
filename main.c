@@ -1,17 +1,28 @@
 #include <stdio.h>
 
-void trocas(int v[], int n) {
-    int i, j;
-    for(i=1; i<n; i++){
-        for(j=0; j<n-i; j++){
-            if( v[j]>v[j+1] ) {
-                int x = v[j];
-                v[j] = v[j+1];
-                v[j+1] = x;
-            }
+int selmin(int v[], int i, int n){
+    int k = i;
+    int j;
+    for(j = i+1; j < n; j++){
+        if(v[k] > v[j]){
+            k = j;
         }
     }
-    printf("%d \n", v[0]);
+    return k;
+}
+
+void trocas(int v[], int n) {
+    int i, k;
+
+    for(i=0; i<n-1; i++){
+        k = selmin(v, i, n);
+        
+        int x = v[i];
+        v[i] = v[k];
+        v[k] = x;
+    }
+
+    for(i = 0; i < n; i++) printf("%d \n", v[i]);
 } 
 
 int main(void) {
