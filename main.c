@@ -1,22 +1,20 @@
 #include <stdio.h>
 
-//x => valor a ser procurado
-//width => tamanho do vetor
-
-void BuscaBinaria(int x, int L[], int width){
-    int IInicial = 0;
-    int IUltimo = width-1;
-    
-    while(IInicial <= IUltimo){
-        int Meio = (IInicial + IUltimo) / 2;
-        if(x == L[Meio]) return printf("X foi encontrado \n");
-        if(x < L[Meio]) IInicial = Meio + 1;
-        else IUltimo = Meio-1;
+void trocas(int v[], int n) {
+    int i, j;
+    for(i=1; i<n; i++){
+        for(j=0; j<n-i; j++){
+            if( v[j]>v[j+1] ) {
+                int x = v[j];
+                v[j] = v[j+1];
+                v[j+1] = x;
+            }
+        }
     }
-    return printf("X nao foi encontrado \n");
-}
+    printf("%d \n", v[0]);
+} 
 
 int main(void) {
-    int L[] = {99, 95, 89, 84, 77, 72, 69, 68, 57, 53, 49, 41, 37, 33, 31, 27, 16, 10};
-    BuscaBinaria(53, L, 18);
+    int L[] = {33, 68, 49, 16, 95, 37, 10, 57, 27, 84, 72, 31, 89, 41, 53, 69, 99, 77};
+    trocas(L, 18);
 } 
