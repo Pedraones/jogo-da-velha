@@ -11,12 +11,5 @@ int main() {
 
     if(vetor == NULL) exit(1);
 
-    for(i = 0; i < tamanho; i++){
-        printf("Digite um valor: ");
-        scanf("%d", &vetor[i]);
-    }
-
-    for(i = 0; i < tamanho; i++){
-        printf("Valor do elemento %d: %d \n", i, vetor[i]);
-    }
+    free(vetor);
 }
