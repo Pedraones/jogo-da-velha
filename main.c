@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct link{
     char item;
@@ -22,6 +23,12 @@ void insere(Link *inicio, char letra){
     
 }
 
+void remover(Link *elemento){
+    Link p = *elemento;
+    *elemento = p->prox;
+    free(p);
+}
+
 int main(void) {
     Link inicio;
 
@@ -30,8 +37,15 @@ int main(void) {
     
     Link p = acessa(inicio,1);
     insere(&p->prox, '*'); 
-    Link q = acessa(inicio,1);
 
+    Link q = acessa(inicio,2);
+
+    printf("%c \n", q->item);
+
+    remover(&q);
+
+    q = acessa(inicio,2);
+    
     printf("%c \n", q->item);
 
     return 0;
