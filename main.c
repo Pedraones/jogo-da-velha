@@ -15,13 +15,24 @@ void insere(Link *inicio, char letra){
     
 }
 
+Link acessa(Link p, int i) {
+    while( i > 0 && p!=NULL) {
+        p = p->prox;
+        i--;
+    }
+    return p;
+} 
+
 int main(void) {
     Link inicio;    
+    Link teste;
 
     insere(&inicio, 'b');
     insere(&inicio, 'c');
 
-    printf("%p \n", inicio->prox);
+    teste = acessa(inicio, 1);
+
+    printf("%c \n", teste->item);
 
     return 0;
 } 
