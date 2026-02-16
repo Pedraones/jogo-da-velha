@@ -21,31 +21,28 @@ void insere(Link **inicio, char letra){
     *inicio = aloca; 
 }
 
-void remover(Link **elemento){
-    Link *copia;
-    copia = *elemento; //*ser_exluido e o elemento que ser remover
-    Link *ser_excluido;
-    ser_excluido = &*copia;
-    *copia = *ser_excluido->prox;
+void remover(Link *elemento, Link *proximo){
+    *elemento = *proximo;
     
-    printf("Na funcao remover: %c \n", ser_excluido->item);
-    free(ser_excluido);
+    printf("Na funcao remover: %c \n", elemento->item);
+    free(proximo);
 }
 
 int main(void) {
     Link *inicio;
+    Link *q, *p;
 
     insere(&inicio, 'b');
     insere(&inicio, 'c');
     insere(&inicio, 'a');
 
-    Link *q;
-    q = acessa(inicio,2);
+    q = acessa(inicio,1);
+    p = acessa(inicio,2);
     printf("Antes da funcao remover: %c \n", q->item);
     
     //ordem: 0=a, 1 = c, 2 = b
 
-    remover(&q);
+    remover(q, p);
     
     q = acessa(inicio,2);
     
