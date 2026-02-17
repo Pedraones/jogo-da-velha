@@ -13,6 +13,7 @@ int escolha_quem_comeca(){
         vez = escolha_quem_comeca();
     };
     
+    system("clear");
     return vez;
 }
 
@@ -23,15 +24,21 @@ int main(){
     vez = escolha_quem_comeca();
 
     for(rodada = 1; rodada<=9;){
+        printf("vez: %d \n", vez);
         printf("%c | %c | %c\n%c | %c | %c\n%c | %c | %c\n", tabuleiro[0], tabuleiro[1], tabuleiro[2], tabuleiro[3], tabuleiro[4], tabuleiro[5], tabuleiro[6], tabuleiro[7], tabuleiro[8]);
-
+        
         printf("Insira qual quadrado deseja inserir o O ou X: ");
         scanf("%d", &posicao);
-        
+
         if(vez == 1) tabuleiro[posicao-1] = 'X';
         if(vez == 2) tabuleiro[posicao-1] = 'O';
+        
         rodada++;
+        
         system("clear");
+        
+        if(vez == 1) vez = 2;
+        else vez = 1;
     }
     
     return 0;
