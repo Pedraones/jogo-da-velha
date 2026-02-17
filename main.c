@@ -19,35 +19,11 @@ int escolha_quem_comeca(){
 
 int main(){
     char tabuleiro[9] = {'1', '2', '3','4', '5', '6','7', '8', '9'};
-    int vez, posicao, rodada;
+    int vez;
     
     vez = escolha_quem_comeca();
 
-    for(rodada = 1; rodada<=9;){
-        printf("%c | %c | %c\n%c | %c | %c\n%c | %c | %c\n", tabuleiro[0], tabuleiro[1], tabuleiro[2], tabuleiro[3], tabuleiro[4], tabuleiro[5], tabuleiro[6], tabuleiro[7], tabuleiro[8]);
-        
-        printf("Insira qual quadrado deseja inserir o O ou X: ");
-        scanf("%d", &posicao);
-
-        if(tabuleiro[posicao-1] == 'X' || tabuleiro[posicao-1] == 'O'){
-            system("clear");
-            printf("Posicao ja ocupada, digite outra\n");
-        }
-        else{
-            if(vez == 1) tabuleiro[posicao-1] = 'X';
-            if(vez == 2) tabuleiro[posicao-1] = 'O';
-            
-            if(vez == 1) vez = 2;
-            else vez = 1;
-            rodada++;
-        }
-
-        if(rodada >= 4){
-            if(verifica_vitoria(tabuleiro) == 0) return 0;
-        }
-        
-        system("clear");
-    }
+    roda_jogo(tabuleiro, &vez);
     
     return 0;
 }
@@ -165,5 +141,55 @@ int verifica_verticais(char *tabuleiro){
             printf("Jogador 2 venceu!");
             return 0;
         }
+    }
+}
+
+void roda_jogo(char *tabuleiro, int *vez){
+    int posicao, rodada;
+    system("clear");
+    for(rodada = 1; rodada<=9;){
+        printf("%c | %c | %c\n%c | %c | %c\n%c | %c | %c\n", tabuleiro[0], tabuleiro[1], tabuleiro[2], tabuleiro[3], tabuleiro[4], tabuleiro[5], tabuleiro[6], tabuleiro[7], tabuleiro[8]);
+        
+        printf("Insira qual quadrado deseja inserir o O ou X: ");
+        scanf("%d", &posicao);
+
+        if(tabuleiro[posicao-1] == 'X' || tabuleiro[posicao-1] == 'O'){
+            system("clear");
+            printf("Posicao ja ocupada, digite outra\n");
+        }
+        else{
+            if(*vez == 1) tabuleiro[posicao-1] = 'X';
+            if(*vez == 2) tabuleiro[posicao-1] = 'O';
+            
+            if(*vez == 1) *vez = 2;
+            else *vez = 1;
+            rodada++;
+        }
+
+        if(rodada >= 4){
+            if(verifica_vitoria(tabuleiro) == 0) {
+                int resposta;
+                printf("\nDeseja jogar novamente: Sim(1), Nao(2) ?");
+                scanf("%d", &resposta);
+
+                if(resposta == 1) {
+                    tabuleiro[0] = '1';
+                    tabuleiro[1] = '2';
+                    tabuleiro[2] = '3';
+                    tabuleiro[3] = '4';
+                    tabuleiro[4] = '5';
+                    tabuleiro[5] = '6';
+                    tabuleiro[6] = '7';
+                    tabuleiro[7] = '8';
+                    tabuleiro[8] = '9';
+                    system("clear");
+                    roda_jogo(tabuleiro, vez);
+                }
+
+                return 0;
+            };
+        }
+        
+        system("clear");
     }
 }
