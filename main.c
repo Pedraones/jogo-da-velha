@@ -40,125 +40,7 @@ int main(){
         }
 
         if(rodada >= 4){
-            if(tabuleiro[0] == tabuleiro[1] && tabuleiro[0] == tabuleiro[2]){
-                if(tabuleiro[0] == 'X') {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 1 venceu!");
-                    return 0;
-                }
-                else {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 2 venceu!");
-                    return 0;
-                }
-            }
-
-            if(tabuleiro[3] == tabuleiro[4] && tabuleiro[3] == tabuleiro[5]){
-                if(tabuleiro[3] == 'X') {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 1 venceu!");
-                    return 0;
-                }
-                else {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 2 venceu!");
-                    return 0;
-                }
-            }
-        
-            if(tabuleiro[6] == tabuleiro[7] && tabuleiro[6] == tabuleiro[8]){
-                if(tabuleiro[6] == 'X') {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 1 venceu!");
-                    return 0;
-                }
-                else {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 2 venceu!");
-                    return 0;
-                }
-            }
-        
-            if(tabuleiro[0] == tabuleiro[3] && tabuleiro[0] == tabuleiro[6]){
-                    if(tabuleiro[0] == 'X') {
-                        rodada = 9;
-                        system("clear");
-                        printf("Jogador 1 venceu!");
-                        return 0;
-                    }
-                    else {
-                        rodada = 9;
-                        system("clear");
-                        printf("Jogador 2 venceu!");
-                        return 0;
-                    }
-                }
-        
-            if(tabuleiro[1] == tabuleiro[4] && tabuleiro[1] == tabuleiro[7]){
-                if(tabuleiro[1] == 'X') {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 1 venceu!");
-                    return 0;
-                }
-                else {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 2 venceu!");
-                    return 0;
-                }
-            }
-        
-            if(tabuleiro[2] == tabuleiro[5] && tabuleiro[2] == tabuleiro[8]){
-                if(tabuleiro[2] == 'X') {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 1 venceu!");
-                    return 0;
-                }
-                else {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 2 venceu!");
-                    return 0;
-                }
-            }
-        
-            if(tabuleiro[0] == tabuleiro[4] && tabuleiro[0] == tabuleiro[8]){
-                if(tabuleiro[0] == 'X') {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 1 venceu!");
-                    return 0;
-                }
-                else {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 2 venceu!");
-                    return 0;
-                }
-            }
-        
-            if(tabuleiro[2] == tabuleiro[4] && tabuleiro[2] == tabuleiro[6]){
-                if(tabuleiro[2] == 'X') {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 1 venceu!");
-                    return 0;
-                }
-                else {
-                    rodada = 9;
-                    system("clear");
-                    printf("Jogador 2 venceu!");
-                    return 0;
-                }
-            }
+            if(verifica_vitoria(tabuleiro) == 0) return 0;
         }
         
         system("clear");
@@ -168,4 +50,112 @@ int main(){
     }
     
     return 0;
+}
+
+int verifica_vitoria(char *tabuleiro){  
+    if(tabuleiro[0] == tabuleiro[1] && tabuleiro[0] == tabuleiro[2]){
+        if(tabuleiro[0] == 'X') {
+            system("clear");
+            printf("Jogador 1 venceu!");
+            return 0;
+        }
+        else {
+            system("clear");
+            printf("Jogador 2 venceu!");
+            return 0;
+        }
+    }
+
+    if(tabuleiro[3] == tabuleiro[4] && tabuleiro[3] == tabuleiro[5]){
+        if(tabuleiro[3] == 'X') {
+            system("clear");
+            printf("Jogador 1 venceu!");
+            return 0;
+        }
+        else {
+            system("clear");
+            printf("Jogador 2 venceu!");
+            return 0;
+        }
+    }
+
+    if(tabuleiro[6] == tabuleiro[7] && tabuleiro[6] == tabuleiro[8]){
+        if(tabuleiro[6] == 'X') {
+            system("clear");
+            printf("Jogador 1 venceu!");
+            return 0;
+        }
+        else {
+            system("clear");
+            printf("Jogador 2 venceu!");
+            return 0;
+        }
+    }
+
+    if(tabuleiro[0] == tabuleiro[3] && tabuleiro[0] == tabuleiro[6]){
+            if(tabuleiro[0] == 'X') {
+                system("clear");
+                printf("Jogador 1 venceu!");
+                return 0;
+            }
+            else {
+                system("clear");
+                printf("Jogador 2 venceu!");
+                return 0;
+            }
+        }
+
+    if(tabuleiro[1] == tabuleiro[4] && tabuleiro[1] == tabuleiro[7]){
+        if(tabuleiro[1] == 'X') {
+            system("clear");
+            printf("Jogador 1 venceu!");
+            return 0;
+        }
+        else {
+            system("clear");
+            printf("Jogador 2 venceu!");
+            return 0;
+        }
+    }
+
+    if(tabuleiro[2] == tabuleiro[5] && tabuleiro[2] == tabuleiro[8]){
+        if(tabuleiro[2] == 'X') {
+            system("clear");
+            printf("Jogador 1 venceu!");
+            return 0;
+        }
+        else {
+            system("clear");
+            printf("Jogador 2 venceu!");
+            return 0;
+        }
+    }
+
+    if(tabuleiro[0] == tabuleiro[4] && tabuleiro[0] == tabuleiro[8]){
+        if(tabuleiro[0] == 'X') {
+            system("clear");
+            printf("Jogador 1 venceu!");
+            return 0;
+        }
+        else {
+            system("clear");
+            printf("Jogador 2 venceu!");
+            return 0;
+        }
+    }
+
+    if(tabuleiro[2] == tabuleiro[4] && tabuleiro[2] == tabuleiro[6]){
+        if(tabuleiro[2] == 'X') {
+            system("clear");
+            printf("Jogador 1 venceu!");
+            return 0;
+        }
+        else {
+            system("clear");
+            printf("Jogador 2 venceu!");
+            return 0;
+        }
+    }
+
+    return 1;
 }
