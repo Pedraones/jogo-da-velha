@@ -53,6 +53,12 @@ int main(){
 }
 
 int verifica_vitoria(char *tabuleiro){  
+    if(verifica_linhas(tabuleiro) == 0) return 0;
+    if(verifica_colunas(tabuleiro) == 0) return 0;
+    if(verifica_verticais(tabuleiro) == 0) return 0;
+}
+
+int verifica_linhas(char *tabuleiro){
     if(tabuleiro[0] == tabuleiro[1] && tabuleiro[0] == tabuleiro[2]){
         if(tabuleiro[0] == 'X') {
             system("clear");
@@ -91,7 +97,9 @@ int verifica_vitoria(char *tabuleiro){
             return 0;
         }
     }
+}
 
+int verifica_colunas(char *tabuleiro){
     if(tabuleiro[0] == tabuleiro[3] && tabuleiro[0] == tabuleiro[6]){
             if(tabuleiro[0] == 'X') {
                 system("clear");
@@ -130,7 +138,9 @@ int verifica_vitoria(char *tabuleiro){
             return 0;
         }
     }
+}
 
+int verifica_verticais(char *tabuleiro){
     if(tabuleiro[0] == tabuleiro[4] && tabuleiro[0] == tabuleiro[8]){
         if(tabuleiro[0] == 'X') {
             system("clear");
@@ -156,6 +166,4 @@ int verifica_vitoria(char *tabuleiro){
             return 0;
         }
     }
-
-    return 1;
 }
