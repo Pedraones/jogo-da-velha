@@ -36,6 +36,9 @@ int main(){
         else{
             if(vez == 1) tabuleiro[posicao-1] = 'X';
             if(vez == 2) tabuleiro[posicao-1] = 'O';
+            
+            if(vez == 1) vez = 2;
+            else vez = 1;
             rodada++;
         }
 
@@ -44,9 +47,6 @@ int main(){
         }
         
         system("clear");
-        
-        if(vez == 1) vez = 2;
-        else vez = 1;
     }
     
     return 0;
