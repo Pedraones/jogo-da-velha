@@ -17,23 +17,6 @@ int escolha_quem_comeca(){
     return vez;
 }
 
-int main(){
-    char tabuleiro[9] = {'1', '2', '3','4', '5', '6','7', '8', '9'};
-    int vez;
-    
-    vez = escolha_quem_comeca();
-
-    roda_jogo(tabuleiro, &vez);
-    
-    return 0;
-}
-
-int verifica_vitoria(char *tabuleiro){  
-    if(verifica_linhas(tabuleiro) == 0) return 0;
-    if(verifica_colunas(tabuleiro) == 0) return 0;
-    if(verifica_verticais(tabuleiro) == 0) return 0;
-}
-
 int verifica_linhas(char *tabuleiro){
     if(tabuleiro[0] == tabuleiro[1] && tabuleiro[0] == tabuleiro[2]){
         if(tabuleiro[0] == 'X') {
@@ -73,6 +56,8 @@ int verifica_linhas(char *tabuleiro){
             return 0;
         }
     }
+
+    return 1;
 }
 
 int verifica_colunas(char *tabuleiro){
@@ -114,6 +99,8 @@ int verifica_colunas(char *tabuleiro){
             return 0;
         }
     }
+
+    return 1;
 }
 
 int verifica_verticais(char *tabuleiro){
@@ -142,9 +129,17 @@ int verifica_verticais(char *tabuleiro){
             return 0;
         }
     }
+
+    return 1;
 }
 
-void roda_jogo(char *tabuleiro, int *vez){
+int verifica_vitoria(char *tabuleiro){  
+    if(verifica_linhas(tabuleiro) == 0) return 0;
+    if(verifica_colunas(tabuleiro) == 0) return 0;
+    if(verifica_verticais(tabuleiro) == 0) return 0;
+}
+
+int roda_jogo(char *tabuleiro, int *vez){
     int posicao, rodada;
     system("clear");
     for(rodada = 1; rodada<=9;){
@@ -185,11 +180,22 @@ void roda_jogo(char *tabuleiro, int *vez){
                     system("clear");
                     roda_jogo(tabuleiro, vez);
                 }
-
-                return 0;
-            };
+            }
+            else return 0;
         }
         
         system("clear");
     }
+    return 0;
+}
+
+int main(){
+    char tabuleiro[9] = {'1', '2', '3','4', '5', '6','7', '8', '9'};
+    int vez;
+    
+    vez = escolha_quem_comeca();
+
+    roda_jogo(tabuleiro, &vez);
+    
+    return 0;
 }
