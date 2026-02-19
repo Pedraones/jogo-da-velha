@@ -182,6 +182,7 @@ int roda_jogo(char *tabuleiro, int *vez){
                     system("clear");
                     roda_jogo(tabuleiro, vez);
                 }
+                else return 0;
             }
         }
         
