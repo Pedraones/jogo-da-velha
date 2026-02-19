@@ -27,7 +27,7 @@ int verifica_linhas(char *tabuleiro){
         else {
             system("clear");
             printf("Jogador 2 venceu!");
-            return 0;
+            return 2;
         }
     }
 
@@ -40,7 +40,7 @@ int verifica_linhas(char *tabuleiro){
         else {
             system("clear");
             printf("Jogador 2 venceu!");
-            return 0;
+            return 2;
         }
     }
 
@@ -53,7 +53,7 @@ int verifica_linhas(char *tabuleiro){
         else {
             system("clear");
             printf("Jogador 2 venceu!");
-            return 0;
+            return 2;
         }
     }
 
@@ -70,7 +70,7 @@ int verifica_colunas(char *tabuleiro){
             else {
                 system("clear");
                 printf("Jogador 2 venceu!");
-                return 0;
+                return 2;
             }
         }
 
@@ -83,7 +83,7 @@ int verifica_colunas(char *tabuleiro){
         else {
             system("clear");
             printf("Jogador 2 venceu!");
-            return 0;
+            return 2;
         }
     }
 
@@ -96,7 +96,7 @@ int verifica_colunas(char *tabuleiro){
         else {
             system("clear");
             printf("Jogador 2 venceu!");
-            return 0;
+            return 2;
         }
     }
 
@@ -113,7 +113,7 @@ int verifica_verticais(char *tabuleiro){
         else {
             system("clear");
             printf("Jogador 2 venceu!");
-            return 0;
+            return 2;
         }
     }
 
@@ -126,18 +126,56 @@ int verifica_verticais(char *tabuleiro){
         else {
             system("clear");
             printf("Jogador 2 venceu!");
-            return 0;
+            return 2;
         }
     }
 
     return 1;
 }
 
-int verifica_vitoria(char *tabuleiro){  
-    if(verifica_linhas(tabuleiro) == 0) return 0;
-    if(verifica_colunas(tabuleiro) == 0) return 0;
-    if(verifica_verticais(tabuleiro) == 0) return 0;
+int exibe_placar(int *placar){
+    printf("\nPLACAR \nJogador 1: %d \nJogador 2: %d", placar[0], placar[1]);
 }
+
+int verifica_vitoria(char *tabuleiro){  
+    static int placar[2] = {0,0}; //[0]-> jogador 1; [1]-> jogador 2
+
+    if(verifica_linhas(tabuleiro) == 0){
+        placar[0]++;
+        exibe_placar(placar);
+        return 0;
+    }
+    else if(verifica_linhas(tabuleiro) == 2){
+        placar[1]++;
+        exibe_placar(placar);
+        return 0;
+    }
+
+    if(verifica_colunas(tabuleiro) == 0) {
+        placar[0]++;
+        exibe_placar(placar);
+        return 0;
+    }
+    else if(verifica_colunas(tabuleiro) == 2){
+        placar[1]++;
+        exibe_placar(placar);
+        return 0;
+    }
+    
+    if(verifica_verticais(tabuleiro) == 0) {
+        placar[0]++;
+        exibe_placar(placar);
+        return 0;
+    }
+    else if(verifica_verticais(tabuleiro) == 2){
+        placar[1]++;
+        exibe_placar(placar);
+        return 0;
+    }
+
+    return 1;
+}
+
 
 int roda_jogo(char *tabuleiro, int *vez){
     int posicao, rodada;
