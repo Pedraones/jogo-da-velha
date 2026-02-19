@@ -141,7 +141,9 @@ int verifica_vitoria(char *tabuleiro){
 
 int roda_jogo(char *tabuleiro, int *vez){
     int posicao, rodada;
+    
     system("clear");
+    
     for(rodada = 1; rodada<=9;){
         printf("%c | %c | %c\n%c | %c | %c\n%c | %c | %c\n", tabuleiro[0], tabuleiro[1], tabuleiro[2], tabuleiro[3], tabuleiro[4], tabuleiro[5], tabuleiro[6], tabuleiro[7], tabuleiro[8]);
         
@@ -181,7 +183,6 @@ int roda_jogo(char *tabuleiro, int *vez){
                     roda_jogo(tabuleiro, vez);
                 }
             }
-            else return 0;
         }
         
         system("clear");
