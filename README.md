@@ -25,6 +25,6 @@
 -`Não permitido selecionar um quadrado já ocupado`: não permite que um jogador sobreponha o quadrado já ocupado por ele mesmo ou seu adversário; <br>
 -`Opção de jogar de novo`: após o fim de cada partida, seja por vitória ou empate, é possível iniciar uma nova rodada; <br>
 -`Exibição dos pontos`: ao fim de cada rodada é demonstrado o placar de vitórias, respectivamente do jogador X e do jogador O. <br>
-![Funcionalidade de jogar de novo e exibir placar]<img src="https://i.imgur.com/KkC60of.png">
+![Funcionalidade de jogar de novo e exibir placar](https://i.imgur.com/KkC60of.png)
 
 
