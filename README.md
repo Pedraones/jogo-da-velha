@@ -1,7 +1,7 @@
 # Jogo-da-velha
 <br>
 <span><img src="https://img.shields.io/badge/Status-Conclu%C3%ADdo-green?style=for-the-badge"></span>
-<span><img src="https://img.shields.io/badge/Linguagem-C-blue?style=for-the-badge"><;span>
+<span><img src="https://img.shields.io/badge/Linguagem-C-blue?style=for-the-badge"></span>
 <span><img src="https://img.shields.io/badge/Sistema%20Operacional-Linux-%23D2691E?style=for-the-badge"></span>
 <br>
 
