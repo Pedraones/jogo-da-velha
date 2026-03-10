@@ -5,6 +5,10 @@
 <span><img src="https://img.shields.io/badge/Sistema%20Operacional-Linux-%23D2691E?style=for-the-badge"></span>
 <br>
 
+<h3>Índice</h3>
+*[Descrição](#Descrição)
+*[Funcionalidades](#Funcionalidades)
+
 <h3>Descrição</h3> <br>
  Esse jogo da velha foi desenvolvido com o intuito focado totalmente em exercitar e reforçar minha lógica de programação. Para isso utilizei a linguagem C, basicamente por puro interesse nesta.
 <br>
