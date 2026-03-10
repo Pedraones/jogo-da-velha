@@ -7,6 +7,6 @@ Funcionalidades:
 -`Não permitido selecionar um quadrado já ocupado`: não permite que um jogador sobreponha o quadrado já ocupado por ele mesmo ou seu adversário
 -`Opção de jogar de novo`: após o fim de cada partida, seja por vitória ou empate, é possível iniciar uma nova rodada.
 -`Exibição dos pontos`: ao fim de cada rodada é demonstrado o placar de vitórias, respectivamente do jogador X e do jogador O.
-[Static Badge](https://img.shields.io/badge/Linguagem-C-blue)
+![Static Badge](https://img.shields.io/badge/Linguagem-C-blue)
 
 
