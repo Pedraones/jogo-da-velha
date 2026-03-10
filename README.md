@@ -1,4 +1,9 @@
 # Jogo-da-velha
+<br>
+![Static Badge](https://img.shields.io/badge/Status-Conclu%C3%ADdo-green?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/Linguagem-C-blue?style=for-the-badge)
+<br>
+
 Descrição: Esse jogo da velha foi desenvolvido com o intuito focado totalmente em exercitar e reforçar minha lógica de programação. Para isso utilizei a linguagem C, basicamente por puro interesse nesta.
 <br>
 Funcionalidades:
@@ -8,6 +13,6 @@ Funcionalidades:
 -`Não permitido selecionar um quadrado já ocupado`: não permite que um jogador sobreponha o quadrado já ocupado por ele mesmo ou seu adversário; <br>
 -`Opção de jogar de novo`: após o fim de cada partida, seja por vitória ou empate, é possível iniciar uma nova rodada; <br>
 -`Exibição dos pontos`: ao fim de cada rodada é demonstrado o placar de vitórias, respectivamente do jogador X e do jogador O. <br>
-![Static Badge](https://img.shields.io/badge/Linguagem-C-blue)
+
 
 
