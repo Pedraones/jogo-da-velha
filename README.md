@@ -16,10 +16,15 @@
 <br>
 -`Escolha de qual jogador inicia a rodada`: a primeira coisa que acontece ao iniciar o jogo é ser questionado sobre qual jogador começará a rodada, X ou O; <br>
 ![Funcionalidade de escolher qual jogador começa]<img src="https://i.imgur.com/wtaPiNN.png">
+
 -`Exibição de quem é o lance`: cada vez conta com a exibição de qual jogador será; <br>
+![Funcionalidade exibir de quem é a vez]
+<img src="https://i.imgur.com/6PJcqLm.png">
+<img src="https://i.imgur.com/hvhPeeK.png">
+
 -`Não permitido selecionar um quadrado já ocupado`: não permite que um jogador sobreponha o quadrado já ocupado por ele mesmo ou seu adversário; <br>
 -`Opção de jogar de novo`: após o fim de cada partida, seja por vitória ou empate, é possível iniciar uma nova rodada; <br>
 -`Exibição dos pontos`: ao fim de cada rodada é demonstrado o placar de vitórias, respectivamente do jogador X e do jogador O. <br>
-
+![Funcionalidade de jogar de novo e exibir placar]<img src="https://i.imgur.com/KkC60of.png">
 
 
