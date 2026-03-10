@@ -6,8 +6,8 @@
 <br>
 
 <h3>Índice</h3>
-*[Descrição](#Descrição)
-*[Funcionalidades](#Funcionalidades)
+[Descrição](#Descrição)
+[Funcionalidades](#Funcionalidades)
 
 <h3>Descrição</h3> <br>
  Esse jogo da velha foi desenvolvido com o intuito focado totalmente em exercitar e reforçar minha lógica de programação. Para isso utilizei a linguagem C, basicamente por puro interesse nesta.
@@ -15,7 +15,7 @@
 <h3>Funcionalidades</h3>
 <br>
 -`Escolha de qual jogador inicia a rodada`: a primeira coisa que acontece ao iniciar o jogo é ser questionado sobre qual jogador começará a rodada, X ou O; <br>
-![Funcionalidade de escolher qual jogador começa]<img src="/home/pedro/jogo-da-velha/imagens/jogador-comeca.png">
+![Funcionalidade de escolher qual jogador começa]<img src="https://imgur.com/a/uKA0iO1">
 -`Exibição de quem é o lance`: cada vez conta com a exibição de qual jogador será; <br>
 -`Não permitido selecionar um quadrado já ocupado`: não permite que um jogador sobreponha o quadrado já ocupado por ele mesmo ou seu adversário; <br>
 -`Opção de jogar de novo`: após o fim de cada partida, seja por vitória ou empate, é possível iniciar uma nova rodada; <br>
