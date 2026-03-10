@@ -5,9 +5,10 @@
 <span><img src="https://img.shields.io/badge/Sistema%20Operacional-Linux-%23D2691E?style=for-the-badge"></span>
 <br>
 
-Descrição: Esse jogo da velha foi desenvolvido com o intuito focado totalmente em exercitar e reforçar minha lógica de programação. Para isso utilizei a linguagem C, basicamente por puro interesse nesta.
+<h3>Descrição</h3> <br>
+ Esse jogo da velha foi desenvolvido com o intuito focado totalmente em exercitar e reforçar minha lógica de programação. Para isso utilizei a linguagem C, basicamente por puro interesse nesta.
 <br>
-Funcionalidades:
+<h3>Funcionalidades</h3>:
 <br>
 -`Escolha de qual jogador inicia a rodada`: a primeira coisa que acontece ao iniciar o jogo é ser questionado sobre qual jogador começará a rodada, X ou O; <br>
 -`Exibição de quem é o lance`: cada vez conta com a exibição de qual jogador será; <br>
