@@ -20,7 +20,7 @@
 
 ---
 
-###Instruções
+### Instruções
 
 1. Se você executará o jogo em um ambiente windows, acesse o código e substitua todos os lugares que possuem 'system(clear);' por 'system(cls);' para não dar erro;
 2. Para executar o jogo (ele funciona apenas no terminal) é necessário estar no mesmo diretório em que está o executável -> Abra o terminal ou cmd -> Para linux digite './jogar'; Para windows experimente 'jogar.exe', se não for 'exe', apenas substitua para a extensão correta, já deverá ser o suficiente.
