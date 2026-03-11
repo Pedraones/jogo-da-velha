@@ -20,6 +20,13 @@
 
 ---
 
+###Instruções
+
+1. Se você executará o jogo em um ambiente windows, acesse o código e substitua todos os lugares que possuem 'system(clear);' por 'system(cls);' para não dar erro;
+2. Para executar o jogo (ele funciona apenas no terminal) é necessário estar no mesmo diretório em que está o executável -> Abra o terminal ou cmd -> Para linux digite './jogar'; Para windows experimente 'jogar.exe', se não for 'exe', apenas substitua para a extensão correta, já deverá ser o suficiente.
+
+---
+
 ### Funcionalidades
 
 - `Escolha de qual jogador inicia a rodada`: a primeira coisa que acontece ao iniciar o jogo é ser questionado sobre qual jogador começará a rodada, X ou O; <br>
@@ -38,5 +45,3 @@
 ![Funcionalidade de jogar de novo e exibir placar](https://i.imgur.com/KkC60of.png)
 
 ---
-
-
